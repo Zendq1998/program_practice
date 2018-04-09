@@ -4,10 +4,13 @@
  * @return {string}
  */
 var convert = function(s, numRows) {
+    if(numRows == 1) {
+        return s
+    }
     let convertArr = []
     let ol = numRows, // 单列
-        el = parseInt(numRows/2) // 双列
-    let tl = ol+el
+        el = numRows-2 // 双列 (斜的都算一列)
+    let tl = ol+el 
         
     for(let i=0;i<numRows;i++) {
         convertArr.push("")
@@ -20,8 +23,8 @@ var convert = function(s, numRows) {
             convertArr[rowNum] += el
         }
         else {
-            console.log((rowNum-ol+1)*2-1)
-            convertArr[(rowNum-ol+1)*2-1] += el
+            console.log((rowNum-ol))
+            convertArr[ol - (rowNum-ol) - 2] += el
         }
     
 }
@@ -33,5 +36,5 @@ var convert = function(s, numRows) {
     console.log(out)
     return out
 };
-convert("ABC",2)
+convert("A",1)
 
