@@ -78,6 +78,11 @@ int main(int argc, const char * argv[]) {
             }
         }
     }
-    cout<<str2;
+    if (str2.length()) {
+        cout<<str2;
+    }
+    else {
+        cout<<endl;
+    }
     return 0;
 }
