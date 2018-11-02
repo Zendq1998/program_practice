@@ -5,7 +5,7 @@
 var myAtoi = function(str) {
     var base = 0,
         sign = 1,
-        i = 0,
+        i = 0;
     while(str[i] == ' '){
         i++
         console.log(i)
