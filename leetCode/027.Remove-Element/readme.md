@@ -30,6 +30,8 @@ Note that the input array is passed in by reference, which means modification to
 
 Internally you can think of this:
 
+
+```
 // nums is passed in by reference. (i.e., without making a copy)
 int len = removeElement(nums, val);
 
@@ -38,3 +40,4 @@ int len = removeElement(nums, val);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
+```
