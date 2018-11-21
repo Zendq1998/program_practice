@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+/* 该方法效率很低，浪费空间 */
+
 class MyQueue {
   private:
     // store elements
