@@ -7,7 +7,7 @@ private:
     struct Node {
         int val;
         Node* next;
-        Node(int x): Node(x, nullptr) {}
+        Node(int x): val(x), next(nullptr) {}
         Node(int x, Node* _next): val(x), next(_next) {}
     };
     Node* head_;
